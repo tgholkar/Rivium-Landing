@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Rivium Solutions - Boutique water and environmental advisory helping utilities, OEMs, and investors derisk pilots and scale solutions.">
+  <title>Rivium Solutions | Boutique Water & Environment Advisory</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="antialiased">
+
+  <!-- Header / Navigation -->
+  <header class="fixed top-0 left-0 right-0 bg-white border-b border-gray-200 z-50">
+    <nav class="container mx-auto px-4 md:px-8 py-4">
+      <div class="flex items-center justify-between">
+        <!-- Logo -->
+        <a href="index.html" class="text-2xl font-bold text-black">
+          Rivium Solutions
+        </a>
+
+        <!-- Desktop Navigation -->
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="about.html" class="nav-link">About</a>
+          <a href="services.html" class="nav-link">Services</a>
+          <a href="projects.html" class="nav-link">Projects</a>
+          <a href="contact.html" class="nav-link">Contact</a>
+          <a href="contact.html" class="btn-primary">Book Intro Call</a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-button" class="md:hidden">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="mobile-menu md:hidden mt-4 pb-4">
+        <div class="flex flex-col space-y-4">
+          <a href="about.html" class="nav-link">About</a>
+          <a href="services.html" class="nav-link">Services</a>
+          <a href="projects.html" class="nav-link">Projects</a>
+          <a href="contact.html" class="nav-link">Contact</a>
+          <a href="contact.html" class="btn-primary text-center">Book Intro Call</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="pt-32 pb-16 md:pt-40 md:pb-24 bg-white">
+    <div class="container mx-auto px-4 md:px-8">
+      <div class="max-w-4xl mx-auto text-center">
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+          Boutique Water & Environment Advisory
+        </h1>
+        <p class="text-xl md:text-2xl text-gray-600 mb-8 leading-relaxed">
+          We help utilities, OEMs, and investors derisk pilots, unlock markets, and scale solutions that deliver resilience and ROI.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="contact.html" class="btn-primary text-center">Book Intro Call</a>
+          <a href="services.html" class="btn-secondary text-center">Our Services</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Overview -->
+  <section class="py-16 md:py-24 bg-gray-50">
+    <div class="container mx-auto px-4 md:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">Strategic Advisory for Water Innovation</h2>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+          From pilot design to market scale, we provide the strategic clarity and execution support you need to succeed.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Service Card 1 -->
+        <div class="service-card">
+          <div class="service-icon">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold mb-3">Market Entry & Business Development</h3>
+          <p class="text-gray-600">
+            Navigate new geographies and customer segments with confidence. We identify opportunities, build partnerships, and accelerate go-to-market strategies.
+          </p>
+        </div>
+
+        <!-- Service Card 2 -->
+        <div class="service-card">
+          <div class="service-icon">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold mb-3">Pilot Design, Due Diligence & Risk Advisory</h3>
+          <p class="text-gray-600">
+            Structure pilots that generate actionable data. We assess technical, commercial, and regulatory risks to derisk pathways to scale.
+          </p>
+        </div>
+
+        <!-- Service Card 3 -->
+        <div class="service-card">
+          <div class="service-icon">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold mb-3">Technology Scouting & Partnerships</h3>
+          <p class="text-gray-600">
+            Connect with the right innovators and solutions. We curate technology assessments and broker strategic partnerships.
+          </p>
+        </div>
+
+        <!-- Service Card 4 -->
+        <div class="service-card">
+          <div class="service-icon">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold mb-3">Project Leadership & Scale-Up Pathways</h3>
+          <p class="text-gray-600">
+            Bridge the gap from proof-of-concept to commercial deployment. We provide interim leadership and execution support.
+          </p>
+        </div>
+
+        <!-- Service Card 5 -->
+        <div class="service-card">
+          <div class="service-icon">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold mb-3">Investment & SDG 6 Opportunity Support</h3>
+          <p class="text-gray-600">
+            Align capital with impact. We support investors and funds with sector diligence, deal sourcing, and impact measurement.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Proof Points -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="container mx-auto px-4 md:px-8">
+      <div class="max-w-4xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+          <div>
+            <h3 class="text-xl font-bold mb-2">Sector-Specialized</h3>
+            <p class="text-gray-600">
+              Deep expertise in water, wastewater, and environmental technology ecosystems
+            </p>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold mb-2">Client-Centric</h3>
+            <p class="text-gray-600">
+              Trusted by utilities, technology providers, and impact investors
+            </p>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold mb-2">Outcome-Focused</h3>
+            <p class="text-gray-600">
+              From pilot validation to market scale and measurable ROI
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Selected Clients/Partners -->
+  <section class="py-16 md:py-24 bg-gray-50">
+    <div class="container mx-auto px-4 md:px-8">
+      <div class="text-center">
+        <h2 class="text-2xl md:text-3xl font-bold mb-8">Selected Clients & Partners</h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+          <!-- Placeholder for client logos -->
+          <div class="flex items-center justify-center h-24 bg-white rounded-lg border border-gray-200">
+            <span class="text-gray-400 text-sm">Client Logo</span>
+          </div>
+          <div class="flex items-center justify-center h-24 bg-white rounded-lg border border-gray-200">
+            <span class="text-gray-400 text-sm">Client Logo</span>
+          </div>
+          <div class="flex items-center justify-center h-24 bg-white rounded-lg border border-gray-200">
+            <span class="text-gray-400 text-sm">Client Logo</span>
+          </div>
+          <div class="flex items-center justify-center h-24 bg-white rounded-lg border border-gray-200">
+            <span class="text-gray-400 text-sm">Client Logo</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Founder Section -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="container mx-auto px-4 md:px-8">
+      <div class="max-w-5xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+          <!-- Founder Photo Placeholder -->
+          <div class="md:col-span-1">
+            <div class="aspect-square bg-gray-200 rounded-2xl flex items-center justify-center">
+              <span class="text-gray-400">Photo Placeholder</span>
+            </div>
+          </div>
+
+          <!-- Founder Bio -->
+          <div class="md:col-span-2">
+            <h2 class="text-3xl md:text-4xl font-bold mb-2">Meet Tejal Gholkar</h2>
+            <p class="text-lg text-gray-600 mb-4 font-medium">
+              Technical Leader | Ex-CTO | 25 Years International
+            </p>
+            <p class="text-gray-600 mb-4 leading-relaxed">
+              Tejal Gholkar founded Rivium Solutions with 25 years of international experience in water and wastewater innovation. As a former CTO and PMP-certified project leader, she brings deep technical expertise and a track record of helping utilities, OEMs, and investors navigate complex pilots, scale solutions, and deliver measurable impact.
+            </p>
+            <div class="mb-4">
+              <p class="text-sm text-gray-600"><strong>Education:</strong> M.Sc. Civil and Environmental Engineering, Texas A&M University</p>
+              <p class="text-sm text-gray-600"><strong>Credentials:</strong> Project Management Professional (PMP)</p>
+              <p class="text-sm text-gray-600"><strong>Expertise:</strong> Lean and Agile PM methodologies</p>
+            </div>
+            <a href="https://www.linkedin.com/in/tejalgholkar" target="_blank" class="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700">
+              <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+              </svg>
+              Connect on LinkedIn
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="py-16 md:py-24 bg-gray-50">
+    <div class="container mx-auto px-4 md:px-8">
+      <div class="max-w-3xl mx-auto text-center">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">Ready to Derisk and Scale?</h2>
+        <p class="text-xl text-gray-600 mb-8">
+          Let's discuss how Rivium can support your next milestone.
+        </p>
+        <a href="contact.html" class="btn-primary text-lg px-8 py-4">Book Intro Call</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-black text-white py-12">
+    <div class="container mx-auto px-4 md:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Company Info -->
+        <div>
+          <h3 class="text-xl font-bold mb-4">Rivium Solutions</h3>
+          <p class="text-gray-400">
+            Boutique water and environmental advisory for utilities, OEMs, and investors.
+          </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h4 class="font-semibold mb-4">Quick Links</h4>
+          <ul class="space-y-2">
+            <li><a href="about.html" class="text-gray-400 hover:text-white">About</a></li>
+            <li><a href="services.html" class="text-gray-400 hover:text-white">Services</a></li>
+            <li><a href="projects.html" class="text-gray-400 hover:text-white">Projects</a></li>
+            <li><a href="contact.html" class="text-gray-400 hover:text-white">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div>
+          <h4 class="font-semibold mb-4">Get in Touch</h4>
+          <p class="text-gray-400 mb-2">
+            <a href="mailto:tejal@rivium.no" class="hover:text-white">tejal@rivium.no</a>
+          </p>
+          <a href="https://www.linkedin.com/in/tejalgholkar" target="_blank" class="inline-flex items-center text-gray-400 hover:text-white">
+            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+            </svg>
+            LinkedIn
+          </a>
+        </div>
+      </div>
+
+      <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400 text-sm">
+        <p>&copy; 2025 Rivium Solutions. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+</body>
+</html>

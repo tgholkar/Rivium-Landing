@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact Rivium Solutions - Book an intro call to discuss your water and environmental technology challenges.">
+  <title>Contact | Rivium Solutions</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="antialiased">
+
+  <!-- Header / Navigation -->
+  <header class="fixed top-0 left-0 right-0 bg-white border-b border-gray-200 z-50">
+    <nav class="container mx-auto px-4 md:px-8 py-4">
+      <div class="flex items-center justify-between">
+        <!-- Logo -->
+        <a href="index.html" class="text-2xl font-bold text-black">
+          Rivium Solutions
+        </a>
+
+        <!-- Desktop Navigation -->
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="about.html" class="nav-link">About</a>
+          <a href="services.html" class="nav-link">Services</a>
+          <a href="projects.html" class="nav-link">Projects</a>
+          <a href="contact.html" class="nav-link font-semibold">Contact</a>
+          <a href="contact.html" class="btn-primary">Book Intro Call</a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-button" class="md:hidden">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="mobile-menu md:hidden mt-4 pb-4">
+        <div class="flex flex-col space-y-4">
+          <a href="about.html" class="nav-link">About</a>
+          <a href="services.html" class="nav-link">Services</a>
+          <a href="projects.html" class="nav-link">Projects</a>
+          <a href="contact.html" class="nav-link font-semibold">Contact</a>
+          <a href="contact.html" class="btn-primary text-center">Book Intro Call</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="pt-32 pb-16 md:pt-40 md:pb-24 bg-white">
+    <div class="container mx-auto px-4 md:px-8">
+      <div class="max-w-4xl mx-auto text-center">
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+          Let's Talk
+        </h1>
+        <p class="text-xl text-gray-600">
+          Whether you're derisking a pilot, entering a new market, or scaling a solution, we're here to help.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="py-16 md:py-24 bg-gray-50">
+    <div class="container mx-auto px-4 md:px-8">
+      <div class="max-w-5xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+
+          <!-- Contact Form -->
+          <div class="bg-white rounded-2xl p-8 border border-gray-200">
+            <h2 class="text-2xl font-bold mb-6">Send a Message</h2>
+            <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="space-y-6">
+              <!-- Name -->
+              <div>
+                <label for="name" class="block text-sm font-semibold mb-2">Name *</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  required
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  placeholder="Your name"
+                >
+              </div>
+
+              <!-- Email -->
+              <div>
+                <label for="email" class="block text-sm font-semibold mb-2">Email *</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  placeholder="your@email.com"
+                >
+              </div>
+
+              <!-- Company -->
+              <div>
+                <label for="company" class="block text-sm font-semibold mb-2">Company / Organization</label>
+                <input
+                  type="text"
+                  id="company"
+                  name="company"
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  placeholder="Optional"
+                >
+              </div>
+
+              <!-- Message -->
+              <div>
+                <label for="message" class="block text-sm font-semibold mb-2">Message *</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  required
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  placeholder="Tell us about your challenge or question..."
+                ></textarea>
+              </div>
+
+              <!-- Submit Button -->
+              <button type="submit" class="btn-primary w-full text-center py-3">
+                Send Message
+              </button>
+
+              <p class="text-sm text-gray-500 text-center">
+                We typically respond within 24 hours
+              </p>
+            </form>
+          </div>
+
+          <!-- Contact Information -->
+          <div>
+            <div class="bg-white rounded-2xl p-8 border border-gray-200 mb-6">
+              <h3 class="text-xl font-bold mb-4">Direct Contact</h3>
+
+              <div class="space-y-4">
+                <!-- Email -->
+                <div class="flex items-start">
+                  <svg class="w-6 h-6 text-blue-500 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                  <div>
+                    <p class="font-semibold mb-1">Email</p>
+                    <a href="mailto:tejal@rivium.no" class="text-blue-600 hover:underline">tejal@rivium.no</a>
+                  </div>
+                </div>
+
+                <!-- LinkedIn -->
+                <div class="flex items-start">
+                  <svg class="w-6 h-6 text-blue-500 mr-3 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                  </svg>
+                  <div>
+                    <p class="font-semibold mb-1">LinkedIn</p>
+                    <a href="https://www.linkedin.com/in/tejalgholkar" target="_blank" class="text-blue-600 hover:underline">Connect with Tejal Gholkar</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Calendly Placeholder -->
+            <div class="bg-white rounded-2xl p-8 border border-gray-200">
+              <h3 class="text-xl font-bold mb-4">Schedule a Call</h3>
+              <p class="text-gray-600 mb-6">
+                Prefer to book time directly? Use the scheduling link below to find a time that works for you.
+              </p>
+              <!-- Calendly integration placeholder -->
+              <div class="bg-gray-100 rounded-lg p-6 text-center border-2 border-dashed border-gray-300">
+                <svg class="w-12 h-12 mx-auto mb-3 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+                <p class="text-gray-600 text-sm mb-4">Calendly scheduling widget will be integrated here</p>
+                <p class="text-xs text-gray-500">For now, please use the contact form or email directly</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="container mx-auto px-4 md:px-8">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-bold mb-8 text-center">Frequently Asked Questions</h2>
+
+        <div class="space-y-6">
+          <!-- FAQ 1 -->
+          <div class="bg-gray-50 rounded-xl p-6">
+            <h3 class="font-bold text-lg mb-2">What types of clients do you work with?</h3>
+            <p class="text-gray-600">
+              We work with utilities, water and wastewater technology providers, OEMs, impact investors, and industry consortia navigating the water innovation ecosystem.
+            </p>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="bg-gray-50 rounded-xl p-6">
+            <h3 class="font-bold text-lg mb-2">How do engagements typically work?</h3>
+            <p class="text-gray-600">
+              Every engagement is tailored to your needs. After an initial consultation, we scope the project, define clear deliverables, and work collaboratively to achieve your goals. Engagements range from short strategic sprints to longer-term embedded support.
+            </p>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="bg-gray-50 rounded-xl p-6">
+            <h3 class="font-bold text-lg mb-2">What makes Rivium different?</h3>
+            <p class="text-gray-600">
+              Rivium is boutique and founder-led. You work directly with Tejal, who brings 25 years of hands-on experience as a CTO and technical leader in water technology. We bridge engineering rigor and commercial execution—no junior teams, no handoffs.
+            </p>
+          </div>
+
+          <!-- FAQ 4 -->
+          <div class="bg-gray-50 rounded-xl p-6">
+            <h3 class="font-bold text-lg mb-2">Where are you located?</h3>
+            <p class="text-gray-600">
+              Rivium is based in Norway and serves clients internationally. We work across North America, Europe, and emerging markets, with the flexibility to travel or engage remotely.
+            </p>
+          </div>
+
+          <!-- FAQ 5 -->
+          <div class="bg-gray-50 rounded-xl p-6">
+            <h3 class="font-bold text-lg mb-2">How quickly can we get started?</h3>
+            <p class="text-gray-600">
+              Typically within 1-2 weeks of our initial conversation, depending on project scope and availability. Reach out to discuss your timeline.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-black text-white py-12">
+    <div class="container mx-auto px-4 md:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Company Info -->
+        <div>
+          <h3 class="text-xl font-bold mb-4">Rivium Solutions</h3>
+          <p class="text-gray-400">
+            Boutique water and environmental advisory for utilities, OEMs, and investors.
+          </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h4 class="font-semibold mb-4">Quick Links</h4>
+          <ul class="space-y-2">
+            <li><a href="about.html" class="text-gray-400 hover:text-white">About</a></li>
+            <li><a href="services.html" class="text-gray-400 hover:text-white">Services</a></li>
+            <li><a href="projects.html" class="text-gray-400 hover:text-white">Projects</a></li>
+            <li><a href="contact.html" class="text-gray-400 hover:text-white">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div>
+          <h4 class="font-semibold mb-4">Get in Touch</h4>
+          <p class="text-gray-400 mb-2">
+            <a href="mailto:tejal@rivium.no" class="hover:text-white">tejal@rivium.no</a>
+          </p>
+          <a href="https://www.linkedin.com/in/tejalgholkar" target="_blank" class="inline-flex items-center text-gray-400 hover:text-white">
+            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+            </svg>
+            LinkedIn
+          </a>
+        </div>
+      </div>
+
+      <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400 text-sm">
+        <p>&copy; 2025 Rivium Solutions. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+</body>
+</html>
