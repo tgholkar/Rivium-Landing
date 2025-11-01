@@ -70,6 +70,10 @@
 
 **Value Prop:** "We help utilities, OEMs, and investors derisk pilots, unlock markets, and scale solutions that deliver resilience and ROI."
 
+### Founder Details
+- **Pronouns:** he/him
+- **Photo:** Tejal.jpeg (in root directory)
+
 ### Service Areas (5)
 1. Market Entry & Business Development
 2. Pilot Design, Due Diligence & Risk Advisory
