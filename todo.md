@@ -1,4 +1,89 @@
-# Rivium Solutions - MVP Website Build
+# Rivium Solutions - Brand Identity Redesign
+
+## Current Task: Homepage Redesign (Jan 2026)
+
+Implementing new brand identity from Rivium_Identity.pdf (Page 13 mockup).
+
+### Phase 1: Homepage Changes
+
+- [ ] **1. Update CSS color variables** - Replace current colors with brand palette
+  - Blue Sea: `#375674`
+  - Sky Blue: `#83B1D1`
+  - Ice Blue: `#EBF4FA`
+  - Grass Green: `#636C37`
+  - Forest Green: `#273534`
+
+- [ ] **2. Set up brand fonts** - Replace Inter with Aleo + Poppins
+  - Add @font-face rules for local font files
+  - Aleo for headings (italic for hero)
+  - Poppins for body text and navigation
+
+- [ ] **3. Update header** - New logo and navigation
+  - Replace text logo with logo image
+  - Reorder nav: SERVICES | ABOUT | PROJECTS | CONTACT US
+  - Style Contact button as outlined
+
+- [ ] **4. Redesign hero section** - Match Page 13 mockup
+  - Split layout: left text, right image
+  - Headline: "Guided by clarity. Grounded in the field." (Aleo italic)
+  - Add water ripple hero image
+  - Grass Green CTA button
+
+- [ ] **5. Add graphic elements** - River pipes SVG as background accent
+
+- [ ] **6. Update remaining sections** - Apply new colors/fonts throughout
+
+- [ ] **7. Update footer** - Blue Sea background with new styling
+
+---
+
+## Review Section
+
+### Changes Made (Jan 16, 2026)
+
+#### CSS Updates (styles.css)
+- Added @font-face rules for Aleo (4 weights) and Poppins (4 weights)
+- Updated color palette with brand colors:
+  - Blue Sea `#375674`
+  - Sky Blue `#83B1D1`
+  - Ice Blue `#EBF4FA`
+  - Grass Green `#636C37`
+  - Forest Green `#273534`
+- Updated typography: Aleo for headings, Poppins for body
+- Updated button styles to use Grass Green
+- Added `.hero-headline` class for italic Aleo
+- Added `.footer-brand` styles for Blue Sea footer
+- Added `.logo-img` responsive sizing
+
+#### HTML Updates (index.html)
+- Removed Google Fonts (Inter), using local fonts via CSS
+- Added Tailwind config for brand colors
+- **Header**: Logo image, reordered nav (Services/About/Projects/Contact Us)
+- **Hero**: Split layout with left text, right image (water ripples)
+- **New Section**: About intro with rocky landscape image + river pipes graphic
+- **Services**: Ice Blue background
+- **All CTAs**: Updated to brand colors
+- **Conflict-Free Policy**: Brand color callout box
+- **Collaboration Card**: Brand color icon
+- **Footer**: Blue Sea background, white logo, Ice Blue links
+
+#### Assets Used
+- `Logos/Copy of RIVIUM-logoprincipal.jpg` (header)
+- `Logos/Copy of RIVIUM-logo-white.png` (footer)
+- `Free to use images/Copy of pexels-pixabay-50677.jpg` (hero water image)
+- `Free to use images/Copy of pexels-tobiasbjorkli-2335126.jpg` (about section)
+- `Graphic Element/Copy of the-river-pipes.svg` (decorative)
+
+#### Backup Files Created
+- `index.html.backup`
+- `styles.css.backup`
+
+To revert: `cp index.html.backup index.html && cp styles.css.backup styles.css`
+
+---
+---
+
+# Previous Build Documentation
 
 ## Project Overview
 
