@@ -1,54 +1,91 @@
-// Rivium Solutions - Minimal JavaScript for Mobile Menu
+// Rivium Solutions - JavaScript
 
-// Language dropdown toggle
-function toggleLangDropdown() {
-  const dropdown = document.getElementById('lang-dropdown');
-  if (dropdown) {
-    dropdown.classList.toggle('hidden');
-  }
-}
+// ===== LANGUAGE SWITCHING =====
 
-// Close language dropdown when clicking outside
-document.addEventListener('click', function(event) {
-  const langSelector = document.getElementById('lang-selector');
-  const dropdown = document.getElementById('lang-dropdown');
-  if (langSelector && dropdown && !langSelector.contains(event.target)) {
-    dropdown.classList.add('hidden');
-  }
-});
-
-// Change language using Google Translate
-function changeLanguage(lang) {
+// Switch language using Google Translate
+function switchLanguage(lang) {
   // Close dropdown
   const dropdown = document.getElementById('lang-dropdown');
   if (dropdown) {
-    dropdown.classList.add('hidden');
+    dropdown.classList.remove('active');
   }
 
   // If selecting English, reset to original
   if (lang === 'en') {
-    // Clear the googtrans cookie to reset to original language
-    document.cookie = "googtrans=;path=/;expires=Thu, 01 Jan 1970 00:00:00 GMT";
-    document.cookie = "googtrans=;path=/;domain=" + window.location.hostname + ";expires=Thu, 01 Jan 1970 00:00:00 GMT";
-    document.cookie = "googtrans=;path=/;domain=." + window.location.hostname + ";expires=Thu, 01 Jan 1970 00:00:00 GMT";
-    window.location.reload();
+    // Clear ALL googtrans cookies thoroughly
+    const hostname = window.location.hostname;
+    const domains = ['', hostname, '.' + hostname];
+    const paths = ['/', ''];
+
+    domains.forEach(domain => {
+      paths.forEach(path => {
+        const domainPart = domain ? ';domain=' + domain : '';
+        const pathPart = path ? ';path=' + path : '';
+        document.cookie = 'googtrans=' + domainPart + pathPart + ';expires=Thu, 01 Jan 1970 00:00:00 GMT';
+      });
+    });
+
+    // Force reload to show original English content
+    window.location.reload(true);
     return;
   }
 
-  // Trigger Google Translate for other languages
-  const select = document.querySelector('.goog-te-combo');
-  if (select) {
-    select.value = lang;
-    select.dispatchEvent(new Event('change'));
+  // For other languages, set the cookie and reload
+  const hostname = window.location.hostname;
+  const cookieValue = '/en/' + lang;
+
+  // Set cookie for multiple domain variations to ensure it works
+  document.cookie = 'googtrans=' + cookieValue + ';path=/';
+  if (hostname) {
+    document.cookie = 'googtrans=' + cookieValue + ';path=/;domain=' + hostname;
+    document.cookie = 'googtrans=' + cookieValue + ';path=/;domain=.' + hostname;
+  }
+
+  // Reload to apply translation
+  window.location.reload(true);
+}
+
+// Update current language display based on cookie
+function updateCurrentLangDisplay() {
+  const currentLangSpan = document.getElementById('current-lang');
+  if (!currentLangSpan) return;
+
+  const cookie = document.cookie.split(';').find(c => c.trim().startsWith('googtrans='));
+  if (cookie) {
+    const value = cookie.split('=')[1];
+    const lang = value.split('/').pop(); // Get last part after /en/
+    const langMap = { 'no': 'NO', 'de': 'DE', 'nl': 'NL', 'en': 'EN' };
+    currentLangSpan.textContent = langMap[lang] || 'EN';
   } else {
-    // If Google Translate isn't loaded yet, set a cookie and reload
-    document.cookie = "googtrans=/en/" + lang + ";path=/";
-    document.cookie = "googtrans=/en/" + lang + ";path=/;domain=" + window.location.hostname;
-    window.location.reload();
+    currentLangSpan.textContent = 'EN';
   }
 }
 
+// ===== DOM READY =====
+
 document.addEventListener('DOMContentLoaded', function() {
+
+  // Language dropdown toggle
+  const langBtn = document.getElementById('lang-btn');
+  const langDropdown = document.getElementById('lang-dropdown');
+
+  if (langBtn && langDropdown) {
+    langBtn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      langDropdown.classList.toggle('active');
+    });
+
+    // Close dropdown when clicking outside
+    document.addEventListener('click', function(e) {
+      if (!langBtn.contains(e.target) && !langDropdown.contains(e.target)) {
+        langDropdown.classList.remove('active');
+      }
+    });
+  }
+
+  // Update language display on load
+  updateCurrentLangDisplay();
+
   // Mobile menu toggle
   const menuButton = document.getElementById('mobile-menu-button');
   const mobileMenu = document.getElementById('mobile-menu');
