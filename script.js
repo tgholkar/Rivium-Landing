@@ -66,25 +66,59 @@ function switchLanguage(lang) {
 
   // If selecting English, reset to original
   if (lang === 'en') {
-    // Clear ALL googtrans cookies thoroughly
+    // Clear ALL googtrans cookies with every possible variation
     const hostname = window.location.hostname;
-    const domains = ['', hostname, '.' + hostname];
-    const paths = ['/', ''];
+    const hostParts = hostname.split('.');
 
+    // Build list of all possible domain variations
+    const domains = ['', hostname];
+    if (hostParts.length >= 2) {
+      domains.push('.' + hostname);
+      domains.push('.' + hostParts.slice(-2).join('.'));
+    }
+
+    const paths = ['/', '', '/index.html'];
+    const expiry = 'expires=Thu, 01 Jan 1970 00:00:00 GMT';
+
+    // Clear with all combinations
     domains.forEach(domain => {
       paths.forEach(path => {
         const domainPart = domain ? ';domain=' + domain : '';
-        const pathPart = path ? ';path=' + path : '';
-        document.cookie = 'googtrans=' + domainPart + pathPart + ';expires=Thu, 01 Jan 1970 00:00:00 GMT';
+        const pathPart = ';path=' + (path || '/');
+        document.cookie = 'googtrans=' + domainPart + pathPart + ';' + expiry;
+        document.cookie = 'googtrans=/' + domainPart + pathPart + ';' + expiry;
+        document.cookie = 'googtrans=/en/en' + domainPart + pathPart + ';' + expiry;
       });
     });
 
-    // Force reload to show original English content
-    window.location.reload(true);
+    // Also clear without any domain/path
+    document.cookie = 'googtrans=;' + expiry;
+    document.cookie = 'googtrans=;path=/;' + expiry;
+
+    // Clear localStorage and sessionStorage items Google might use
+    try {
+      Object.keys(localStorage).forEach(key => {
+        if (key.toLowerCase().includes('translate') || key.toLowerCase().includes('goog')) {
+          localStorage.removeItem(key);
+        }
+      });
+      Object.keys(sessionStorage).forEach(key => {
+        if (key.toLowerCase().includes('translate') || key.toLowerCase().includes('goog')) {
+          sessionStorage.removeItem(key);
+        }
+      });
+    } catch (e) {}
+
+    // Navigate to clean URL to ensure fresh page load
+    const cleanUrl = window.location.protocol + '//' + window.location.host + window.location.pathname;
+    window.location.href = cleanUrl;
     return;
   }
 
-  // For other languages, set the cookie and reload
+  // For other languages, first clear any existing translation
+  document.cookie = 'googtrans=;path=/;expires=Thu, 01 Jan 1970 00:00:00 GMT';
+
+  // Set the new language cookie
   const hostname = window.location.hostname;
   const cookieValue = '/en/' + lang;
 
