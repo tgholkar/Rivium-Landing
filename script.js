@@ -25,7 +25,17 @@ function changeLanguage(lang) {
     dropdown.classList.add('hidden');
   }
 
-  // Trigger Google Translate
+  // If selecting English, reset to original
+  if (lang === 'en') {
+    // Clear the googtrans cookie to reset to original language
+    document.cookie = "googtrans=;path=/;expires=Thu, 01 Jan 1970 00:00:00 GMT";
+    document.cookie = "googtrans=;path=/;domain=" + window.location.hostname + ";expires=Thu, 01 Jan 1970 00:00:00 GMT";
+    document.cookie = "googtrans=;path=/;domain=." + window.location.hostname + ";expires=Thu, 01 Jan 1970 00:00:00 GMT";
+    window.location.reload();
+    return;
+  }
+
+  // Trigger Google Translate for other languages
   const select = document.querySelector('.goog-te-combo');
   if (select) {
     select.value = lang;
