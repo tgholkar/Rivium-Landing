@@ -414,9 +414,33 @@ html {
 
 /* ===== HIDE GOOGLE TRANSLATE UI ===== */
 
-/* Hide the Google Translate top bar completely */
-.goog-te-banner-frame,
-.skiptranslate.goog-te-banner-frame,
+/* Hide the Google Translate top bar iframe completely */
+.goog-te-banner-frame {
+  display: none !important;
+  visibility: hidden !important;
+  height: 0 !important;
+  opacity: 0 !important;
+}
+
+.skiptranslate {
+  display: none !important;
+  height: 0 !important;
+  visibility: hidden !important;
+}
+
+iframe.skiptranslate {
+  display: none !important;
+  height: 0 !important;
+  visibility: hidden !important;
+}
+
+/* Target the specific Google banner frame */
+body > .skiptranslate {
+  display: none !important;
+  height: 0 !important;
+}
+
+/* Hide other Google Translate elements */
 #goog-gt-tt,
 .goog-te-balloon-frame,
 div#goog-gt-,
@@ -426,10 +450,22 @@ div#goog-gt-,
   display: none !important;
 }
 
-/* Prevent body from being pushed down by Google bar */
+/* CRITICAL: Prevent body from being pushed down by Google bar */
 body {
   top: 0 !important;
   position: static !important;
+}
+
+html.translated-ltr body,
+html.translated-rtl body {
+  top: 0 !important;
+}
+
+/* Remove any top margin/padding Google might add */
+html.translated-ltr,
+html.translated-rtl {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
 }
 
 /* Hide the "Select Language" text */

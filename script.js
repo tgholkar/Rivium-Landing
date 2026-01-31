@@ -1,5 +1,59 @@
 // Rivium Solutions - JavaScript
 
+// ===== HIDE GOOGLE TRANSLATE BAR =====
+
+// Function to hide Google Translate banner
+function hideGoogleTranslateBar() {
+  // Hide the banner frame iframe
+  const bannerFrame = document.querySelector('.goog-te-banner-frame');
+  if (bannerFrame) {
+    bannerFrame.style.display = 'none';
+    bannerFrame.style.visibility = 'hidden';
+    bannerFrame.style.height = '0';
+  }
+
+  // Hide all skiptranslate elements
+  const skipTranslate = document.querySelectorAll('.skiptranslate');
+  skipTranslate.forEach(el => {
+    if (el.tagName === 'IFRAME' || el.classList.contains('goog-te-banner-frame')) {
+      el.style.display = 'none';
+      el.style.visibility = 'hidden';
+      el.style.height = '0';
+    }
+  });
+
+  // Reset body position (Google Translate pushes body down)
+  document.body.style.top = '0px';
+  document.body.style.position = 'static';
+}
+
+// Run immediately and watch for changes
+hideGoogleTranslateBar();
+
+// Use MutationObserver to catch when Google adds elements
+const observer = new MutationObserver(function(mutations) {
+  hideGoogleTranslateBar();
+});
+
+// Start observing when DOM is ready
+if (document.body) {
+  observer.observe(document.body, { childList: true, subtree: true });
+} else {
+  document.addEventListener('DOMContentLoaded', function() {
+    observer.observe(document.body, { childList: true, subtree: true });
+  });
+}
+
+// Also run periodically for the first few seconds
+let hideAttempts = 0;
+const hideInterval = setInterval(function() {
+  hideGoogleTranslateBar();
+  hideAttempts++;
+  if (hideAttempts > 20) {
+    clearInterval(hideInterval);
+  }
+}, 250);
+
 // ===== LANGUAGE SWITCHING =====
 
 // Switch language using Google Translate
