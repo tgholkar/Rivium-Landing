@@ -60,14 +60,19 @@
           <a href="projects.html" class="nav-link">Projects</a>
           <!-- Language Selector -->
           <div class="relative" id="lang-selector">
-            <button onclick="toggleLangDropdown()" class="flex items-center text-forest-green hover:text-blue-sea transition-colors">
+            <button onclick="toggleLangDropdown()" class="flex items-center text-forest-green hover:text-blue-sea transition-colors" title="Select Language">
               <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
               </svg>
             </button>
-            <div id="lang-dropdown" class="hidden absolute right-0 mt-2 w-40 bg-white border border-gray-200 rounded-lg shadow-lg z-50">
-              <div id="google_translate_element" class="lang-dropdown-content"></div>
+            <div id="lang-dropdown" class="hidden absolute right-0 mt-2 bg-white border border-gray-200 rounded-lg shadow-lg z-50 py-2 min-w-[140px]">
+              <button onclick="changeLanguage('en')" class="lang-btn w-full text-left px-4 py-2 text-sm hover:bg-ice-blue text-forest-green">English</button>
+              <button onclick="changeLanguage('no')" class="lang-btn w-full text-left px-4 py-2 text-sm hover:bg-ice-blue text-forest-green">Norsk</button>
+              <button onclick="changeLanguage('de')" class="lang-btn w-full text-left px-4 py-2 text-sm hover:bg-ice-blue text-forest-green">Deutsch</button>
+              <button onclick="changeLanguage('nl')" class="lang-btn w-full text-left px-4 py-2 text-sm hover:bg-ice-blue text-forest-green">Nederlands</button>
             </div>
+            <!-- Hidden Google Translate element -->
+            <div id="google_translate_element" style="display:none;"></div>
           </div>
           <a href="contact.html" class="btn-outline">Contact Us</a>
         </div>
@@ -87,7 +92,12 @@
           <a href="about.html" class="nav-link">About</a>
           <a href="projects.html" class="nav-link">Projects</a>
           <!-- Mobile Language Selector -->
-          <div id="google_translate_element_mobile" class="lang-dropdown-content"></div>
+          <div class="flex flex-wrap gap-2 py-2">
+            <button onclick="changeLanguage('en')" class="lang-btn-mobile px-3 py-1 text-sm border border-sky-blue rounded-full text-forest-green hover:bg-ice-blue">EN</button>
+            <button onclick="changeLanguage('no')" class="lang-btn-mobile px-3 py-1 text-sm border border-sky-blue rounded-full text-forest-green hover:bg-ice-blue">NO</button>
+            <button onclick="changeLanguage('de')" class="lang-btn-mobile px-3 py-1 text-sm border border-sky-blue rounded-full text-forest-green hover:bg-ice-blue">DE</button>
+            <button onclick="changeLanguage('nl')" class="lang-btn-mobile px-3 py-1 text-sm border border-sky-blue rounded-full text-forest-green hover:bg-ice-blue">NL</button>
+          </div>
           <a href="contact.html" class="btn-outline text-center">Contact Us</a>
         </div>
       </div>

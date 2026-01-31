@@ -17,6 +17,27 @@ document.addEventListener('click', function(event) {
   }
 });
 
+// Change language using Google Translate
+function changeLanguage(lang) {
+  // Close dropdown
+  const dropdown = document.getElementById('lang-dropdown');
+  if (dropdown) {
+    dropdown.classList.add('hidden');
+  }
+
+  // Trigger Google Translate
+  const select = document.querySelector('.goog-te-combo');
+  if (select) {
+    select.value = lang;
+    select.dispatchEvent(new Event('change'));
+  } else {
+    // If Google Translate isn't loaded yet, set a cookie and reload
+    document.cookie = "googtrans=/en/" + lang + ";path=/";
+    document.cookie = "googtrans=/en/" + lang + ";path=/;domain=" + window.location.hostname;
+    window.location.reload();
+  }
+}
+
 document.addEventListener('DOMContentLoaded', function() {
   // Mobile menu toggle
   const menuButton = document.getElementById('mobile-menu-button');
