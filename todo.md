@@ -14,6 +14,50 @@ Extending brand identity from homepage to all other pages.
 - [x] **6. Update remaining sections** - Brand colors/fonts applied
 - [x] **7. Update footer** - Blue Sea background with white logo
 
+### Phase 3: Multi-Language Translation Feature
+
+**Goal:** Add a language selector button in the top-right corner that translates the page to Norwegian and other languages.
+
+#### Options Considered:
+
+| Option | Pros | Cons |
+|--------|------|------|
+| **Google Translate Widget** | Free, easy, automatic | Google branding, sometimes awkward translations |
+| **Manual translations (separate pages)** | Full control, SEO-friendly | Lots of work, maintenance burden |
+| **Weglot/Lokalise (paid services)** | Professional, automatic | Monthly cost |
+
+**Recommended: Google Translate Widget (customized)**
+- Free and automatic
+- Can be styled to match brand
+- No maintenance needed
+- Works on static sites
+
+#### Implementation Plan:
+
+- [x] **1. Create language selector component**
+  - Small button/dropdown in header (top-right, before Contact Us)
+  - Globe icon or flag icons
+  - Languages: English (default), Norwegian, German, Dutch
+
+- [x] **2. Add Google Translate script**
+  - Include Google Translate JavaScript
+  - Configure for selected languages only
+  - Hide Google branding where possible
+
+- [x] **3. Style the selector**
+  - Match brand colors (Blue Sea, Forest Green)
+  - Clean dropdown appearance
+  - Mobile-responsive
+
+- [x] **4. Add to all pages**
+  - Update header on index.html, about.html, services.html, projects.html, contact.html
+
+- [ ] **5. Test translations**
+  - Verify Norwegian translation quality
+  - Check layout doesn't break with longer translated text
+
+---
+
 ### Phase 2: Other Pages (about, services, projects, contact) ✅ COMPLETE
 
 #### Common changes for all 4 pages:

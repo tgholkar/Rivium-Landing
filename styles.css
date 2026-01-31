@@ -322,3 +322,74 @@ html {
     height: 64px;
   }
 }
+
+/* ===== LANGUAGE SELECTOR ===== */
+#lang-dropdown {
+  padding: 0.5rem;
+}
+
+/* Hide Google Translate branding and style the dropdown */
+.goog-te-gadget {
+  font-family: 'Poppins', sans-serif !important;
+  font-size: 0.875rem !important;
+}
+
+.goog-te-gadget-simple {
+  background-color: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  font-size: 0.875rem !important;
+}
+
+.goog-te-gadget-simple .goog-te-menu-value {
+  color: var(--forest-green) !important;
+  font-family: 'Poppins', sans-serif !important;
+}
+
+.goog-te-gadget-simple .goog-te-menu-value span {
+  color: var(--forest-green) !important;
+}
+
+.goog-te-gadget-simple .goog-te-menu-value:hover {
+  color: var(--blue-sea) !important;
+}
+
+/* Hide Google Translate top bar */
+.goog-te-banner-frame {
+  display: none !important;
+}
+
+body {
+  top: 0 !important;
+}
+
+/* Style the translate dropdown content */
+.lang-dropdown-content .goog-te-gadget {
+  margin: 0 !important;
+}
+
+.lang-dropdown-content .goog-te-gadget-simple {
+  width: 100%;
+  text-align: left;
+}
+
+/* Hide "Powered by Google" text */
+.goog-te-gadget span {
+  display: none;
+}
+
+.goog-te-gadget .goog-te-gadget-simple {
+  display: block !important;
+}
+
+/* Mobile language selector */
+#google_translate_element_mobile {
+  padding: 0.5rem 0;
+}
+
+#google_translate_element_mobile .goog-te-gadget-simple {
+  width: 100%;
+  padding: 0.5rem !important;
+  border: 1px solid var(--sky-blue) !important;
+  border-radius: 0.375rem !important;
+}

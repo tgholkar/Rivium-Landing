@@ -28,6 +28,19 @@
 
   <!-- Custom Styles -->
   <link rel="stylesheet" href="styles.css">
+
+  <!-- Google Translate -->
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        includedLanguages: 'en,no,de,nl',
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+        autoDisplay: false
+      }, 'google_translate_element');
+    }
+  </script>
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </head>
 <body class="antialiased">
 
@@ -45,6 +58,17 @@
           <a href="services.html" class="nav-link">Services</a>
           <a href="about.html" class="nav-link">About</a>
           <a href="projects.html" class="nav-link">Projects</a>
+          <!-- Language Selector -->
+          <div class="relative" id="lang-selector">
+            <button onclick="toggleLangDropdown()" class="flex items-center text-forest-green hover:text-blue-sea transition-colors">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+              </svg>
+            </button>
+            <div id="lang-dropdown" class="hidden absolute right-0 mt-2 w-40 bg-white border border-gray-200 rounded-lg shadow-lg z-50">
+              <div id="google_translate_element" class="lang-dropdown-content"></div>
+            </div>
+          </div>
           <a href="contact.html" class="btn-outline">Contact Us</a>
         </div>
 
@@ -62,6 +86,8 @@
           <a href="services.html" class="nav-link">Services</a>
           <a href="about.html" class="nav-link">About</a>
           <a href="projects.html" class="nav-link">Projects</a>
+          <!-- Mobile Language Selector -->
+          <div id="google_translate_element_mobile" class="lang-dropdown-content"></div>
           <a href="contact.html" class="btn-outline text-center">Contact Us</a>
         </div>
       </div>

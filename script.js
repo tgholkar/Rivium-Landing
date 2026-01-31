@@ -1,5 +1,22 @@
 // Rivium Solutions - Minimal JavaScript for Mobile Menu
 
+// Language dropdown toggle
+function toggleLangDropdown() {
+  const dropdown = document.getElementById('lang-dropdown');
+  if (dropdown) {
+    dropdown.classList.toggle('hidden');
+  }
+}
+
+// Close language dropdown when clicking outside
+document.addEventListener('click', function(event) {
+  const langSelector = document.getElementById('lang-selector');
+  const dropdown = document.getElementById('lang-dropdown');
+  if (langSelector && dropdown && !langSelector.contains(event.target)) {
+    dropdown.classList.add('hidden');
+  }
+});
+
 document.addEventListener('DOMContentLoaded', function() {
   // Mobile menu toggle
   const menuButton = document.getElementById('mobile-menu-button');
