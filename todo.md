@@ -1,45 +1,82 @@
 # Rivium Solutions - Brand Identity Redesign
 
-## Current Task: Homepage Redesign (Jan 2026)
+## Current Task: Other Pages Redesign (Jan 2026)
 
-Implementing new brand identity from Rivium_Identity.pdf (Page 13 mockup).
+Extending brand identity from homepage to all other pages.
 
-### Phase 1: Homepage Changes
+### Phase 1: Homepage Changes ✅ COMPLETE
 
-- [ ] **1. Update CSS color variables** - Replace current colors with brand palette
-  - Blue Sea: `#375674`
-  - Sky Blue: `#83B1D1`
-  - Ice Blue: `#EBF4FA`
-  - Grass Green: `#636C37`
-  - Forest Green: `#273534`
+- [x] **1. Update CSS color variables** - Brand palette added
+- [x] **2. Set up brand fonts** - Aleo + Poppins via @font-face
+- [x] **3. Update header** - Logo image, reordered nav, outlined Contact button
+- [x] **4. Redesign hero section** - Split layout with water ripple image
+- [x] **5. Add graphic elements** - River pipes SVG accent
+- [x] **6. Update remaining sections** - Brand colors/fonts applied
+- [x] **7. Update footer** - Blue Sea background with white logo
 
-- [ ] **2. Set up brand fonts** - Replace Inter with Aleo + Poppins
-  - Add @font-face rules for local font files
-  - Aleo for headings (italic for hero)
-  - Poppins for body text and navigation
+### Phase 2: Other Pages (about, services, projects, contact) ✅ COMPLETE
 
-- [ ] **3. Update header** - New logo and navigation
-  - Replace text logo with logo image
-  - Reorder nav: SERVICES | ABOUT | PROJECTS | CONTACT US
-  - Style Contact button as outlined
+#### Common changes for all 4 pages:
+- [x] Remove Google Fonts link (Inter) - CSS already has local fonts
+- [x] Add Tailwind config with brand colors
+- [x] Update header: logo image, nav order (Services|About|Projects|Contact Us), outlined button
+- [x] Update footer: Blue Sea background, white logo image, Ice Blue links
 
-- [ ] **4. Redesign hero section** - Match Page 13 mockup
-  - Split layout: left text, right image
-  - Headline: "Guided by clarity. Grounded in the field." (Aleo italic)
-  - Add water ripple hero image
-  - Grass Green CTA button
+#### Page-specific changes:
 
-- [ ] **5. Add graphic elements** - River pipes SVG as background accent
+- [x] **about.html**
+  - Update LinkedIn links from text-blue-600 to brand color
+  - Update border-blue-500 callout to brand color
+  - Update credential icons from text-blue-600
 
-- [ ] **6. Update remaining sections** - Apply new colors/fonts throughout
+- [x] **services.html**
+  - Update text-blue-600 checkmarks to brand color
+  - Update bg-blue-50 boxes to bg-ice-blue
+  - Update conflict-free policy box to brand styling
 
-- [ ] **7. Update footer** - Blue Sea background with new styling
+- [x] **projects.html**
+  - Update text-blue-500 arrow icons to brand color
+
+- [x] **contact.html**
+  - Update form focus states (focus:ring-blue-500 → brand)
+  - Update text-blue-500/text-blue-600 icons to brand colors
 
 ---
 
 ## Review Section
 
-### Changes Made (Jan 16, 2026)
+### Changes Made (Jan 31, 2026) - Phase 2: Other Pages
+
+Updated all 4 secondary pages to match the homepage brand identity:
+
+#### All Pages (about, services, projects, contact)
+- Removed Google Fonts (Inter) - now using local Aleo/Poppins via CSS
+- Added Tailwind config with brand colors (blue-sea, sky-blue, ice-blue, grass-green, forest-green)
+- Updated header: logo image, nav order (Services|About|Projects|Contact Us), outlined button
+- Updated footer: Blue Sea background (#375674), white logo, Ice Blue links, phone number added
+- Updated copyright year to 2026
+
+#### about.html
+- LinkedIn link: text-blue-600 → text-blue-sea
+- Callout border: border-blue-500 → border-sky-blue
+- Credential icons: text-blue-600 → text-blue-sea
+
+#### services.html
+- Checkmarks in lists: text-blue-600 → text-blue-sea
+- Callout boxes: bg-blue-50 → bg-ice-blue
+- Conflict-free policy: border-blue-500 → border-sky-blue, text colors updated
+- Policy text: text-blue-800 → text-forest-green, text-blue-900 → text-blue-sea
+
+#### projects.html
+- Arrow icons: text-blue-500 → text-blue-sea
+
+#### contact.html
+- Icon colors: text-blue-500/600 → text-blue-sea
+- Form focus states: focus:ring-blue-500 → focus:ring-sky-blue
+
+---
+
+### Changes Made (Jan 16, 2026) - Phase 1: Homepage
 
 #### CSS Updates (styles.css)
 - Added @font-face rules for Aleo (4 weights) and Poppins (4 weights)
