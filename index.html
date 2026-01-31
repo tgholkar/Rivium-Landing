@@ -139,16 +139,6 @@
 
   <!-- About Intro Section with River Pipes -->
   <section class="py-12 md:py-20 bg-white relative overflow-hidden">
-    <!-- River Pipes Graphic - positioned at section level -->
-    <div class="absolute left-[calc(50%-2rem)] top-12 w-64 h-64 opacity-20 hidden md:block pointer-events-none">
-      <img src="Graphic Element/Copy of the-river-pipes.svg" alt="" class="w-full h-full">
-    </div>
-
-    <!-- Blue Line Extension - positioned at section level, at "engineering" line -->
-    <div class="absolute left-[calc(50%+2rem)] top-[9.5rem] hidden md:block pointer-events-none" style="opacity: 0.2;">
-      <img src="blue_line.jpg" alt="" class="h-2 w-96" style="max-width: none;">
-    </div>
-
     <div class="container mx-auto px-4 md:px-8">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-start">
         <!-- Left: Image -->
@@ -160,9 +150,19 @@
           >
         </div>
 
-        <!-- Right: Text -->
+        <!-- Right: Text + Graphics -->
         <div class="relative">
-          <p class="text-base md:text-lg leading-relaxed" style="color: var(--forest-green);">
+          <!-- River Pipes Graphic - Left side -->
+          <div class="absolute -left-24 top-0 w-56 h-56 opacity-20 hidden md:block pointer-events-none">
+            <img src="Graphic Element/Copy of the-river-pipes.svg" alt="" class="w-full h-full">
+          </div>
+
+          <!-- Blue Line - at "engineering" line level, extending right -->
+          <div class="absolute -left-8 top-[4.5rem] hidden md:block pointer-events-none" style="opacity: 0.25;">
+            <img src="blue_line.jpg" alt="" class="h-1" style="width: 400px; max-width: none;">
+          </div>
+
+          <p class="text-base md:text-lg leading-relaxed relative z-10" style="color: var(--forest-green);">
             Rivium is a boutique studio in water & environment that carries work from first proof to reliable operation. We sit at the confluence of engineering, operations, and strategy, and run a continuum that turns intent into evidence, evidence into decisions, and decisions into disciplined outcomes.
           </p>
         </div>
