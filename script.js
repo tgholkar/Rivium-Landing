@@ -149,7 +149,7 @@ function updateCurrentLangDisplay() {
   if (!currentLangSpan) return;
 
   const lang = getCurrentLanguage();
-  const langMap = { 'no': 'NO', 'de': 'DE', 'nl': 'NL', 'en': 'EN' };
+  const langMap = { 'no': 'NO', 'de': 'DE', 'nl': 'NL', 'fr': 'FR', 'en': 'EN' };
   currentLangSpan.textContent = langMap[lang] || 'EN';
 }
 
