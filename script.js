@@ -133,19 +133,37 @@ function switchLanguage(lang) {
   window.location.reload(true);
 }
 
+// Get current language from cookie
+function getCurrentLanguage() {
+  const cookie = document.cookie.split(';').find(c => c.trim().startsWith('googtrans='));
+  if (cookie) {
+    const value = cookie.split('=')[1];
+    return value.split('/').pop(); // Get last part after /en/
+  }
+  return 'en';
+}
+
 // Update current language display based on cookie
 function updateCurrentLangDisplay() {
   const currentLangSpan = document.getElementById('current-lang');
   if (!currentLangSpan) return;
 
-  const cookie = document.cookie.split(';').find(c => c.trim().startsWith('googtrans='));
-  if (cookie) {
-    const value = cookie.split('=')[1];
-    const lang = value.split('/').pop(); // Get last part after /en/
-    const langMap = { 'no': 'NO', 'de': 'DE', 'nl': 'NL', 'en': 'EN' };
-    currentLangSpan.textContent = langMap[lang] || 'EN';
-  } else {
-    currentLangSpan.textContent = 'EN';
+  const lang = getCurrentLanguage();
+  const langMap = { 'no': 'NO', 'de': 'DE', 'nl': 'NL', 'en': 'EN' };
+  currentLangSpan.textContent = langMap[lang] || 'EN';
+}
+
+// Update custom translated elements based on language
+function updateCustomTranslations() {
+  const lang = getCurrentLanguage();
+
+  // Update hero tagline
+  const heroTagline = document.getElementById('hero-tagline');
+  if (heroTagline) {
+    const translation = heroTagline.getAttribute('data-' + lang) || heroTagline.getAttribute('data-en');
+    if (translation) {
+      heroTagline.innerHTML = translation;
+    }
   }
 }
 
@@ -171,8 +189,9 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
-  // Update language display on load
+  // Update language display and custom translations on load
   updateCurrentLangDisplay();
+  updateCustomTranslations();
 
   // Mobile menu toggle
   const menuButton = document.getElementById('mobile-menu-button');
