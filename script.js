@@ -207,6 +207,22 @@ function updateCustomTranslations() {
       heroTagline.innerHTML = translation;
     }
   }
+
+  // Update language-specific content blocks (e.g., About page bio)
+  const langContents = document.querySelectorAll('.lang-content[data-lang]');
+  if (langContents.length > 0) {
+    langContents.forEach(el => {
+      const elLang = el.getAttribute('data-lang');
+      if (elLang === lang) {
+        el.style.display = '';
+      } else if (elLang === 'en' && !document.querySelector('.lang-content[data-lang="' + lang + '"]')) {
+        // Show English as fallback if no translation exists for current language
+        el.style.display = '';
+      } else {
+        el.style.display = 'none';
+      }
+    });
+  }
 }
 
 // ===== DOM READY =====
