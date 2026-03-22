@@ -56,7 +56,20 @@
 
         <!-- Desktop Navigation -->
         <div class="hidden md:flex items-center space-x-8">
-          <a href="services.html" class="nav-link">Services</a>
+          <!-- Services Dropdown -->
+          <div class="services-nav-wrapper">
+            <a href="services.html" class="nav-link">Services
+              <svg class="services-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+              </svg>
+            </a>
+            <div class="services-dropdown-menu">
+              <a href="service-market-entry.html">Market Entry</a>
+              <a href="service-business-development.html">Business Development</a>
+              <a href="service-technical-due-diligence.html">Technical Due Diligence</a>
+              <a href="service-pmo-integration.html">PMO Support &amp; Integration</a>
+            </div>
+          </div>
           <a href="about.html" class="nav-link font-semibold">About</a>
           <a href="projects.html" class="nav-link">Projects</a>
           <!-- Language Selector -->
